@@ -4,7 +4,27 @@
 <head>
   <title>title</title>
   <!--  -->
-  @@include('templateHtml/head.html')
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!-- Microsoft Tiles -->
+<meta name="msapplication-config" content="browserconfig.xml">
+
+<link rel="icon" type="image/png" href="favicon.ico">
+
+<!-- Font Awesome -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+<!-- Fonts -->
+<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/main.min.css">
+
   <!--  -->
 
 
@@ -16,13 +36,96 @@
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <!-- @@include('templateHtml/preloader.html') -->  
+    
 
   <div class="mainWrapper">
 
     <div class="contentWrapper">
       <!--  -->
-      @@include('templateHtml/header.html', { "home": "active" })
+      <header class="main-header">
+	<div class="mcontainer">
+		<div class="nav-menu-wraper flex">
+			<div class="menu-list">
+				<div class="nav">
+		
+				  <div class="menu-btn">
+					<div class="line line--1"></div>
+					<div class="line line--2"></div>
+					<div class="line line--3"></div>
+				  </div>
+				
+				  <div class="nav-links">
+					<ul class="item-list">
+
+					 <li class="icon-plus item-menu">
+						<a href="#" class="link">Солнцезащитные очки</a>
+						<ul class="subitem-hiden">
+							<li><a href="#">Все очки</a></li>
+							<li><a href="#">Женские очки</a></li>
+							<li><a href="#">Мужские очки</a></li>
+							<li class="sale"><a href="#">Распродажа</a></li>
+						</ul>
+					 </li> 
+					 <li class="icon-plus item-menu">
+						<a href="#" class="link">Имидж очки</a>
+						<ul class="subitem-hiden">
+							<li><a href="#">Все имидж очки</a></li>
+							<li><a href="#">Женские имидж очки</a></li>
+							<li><a href="#">Мужские имидж очки</a></li>
+							<li class="sale"><a href="#">Распродажа</a></li>
+						</ul>
+					 </li> 
+					 <li class="icon-plus item-menu">
+						 <a href="#" class="link">Очки для компьютера</a>
+						 <ul class="subitem-hiden">
+							<li><a href="#">Все очки</a></li>
+							<li><a href="#">Женские очки</a></li>
+							<li><a href="#">Мужские очки</a></li>
+							<li class="sale"><a href="#">Распродажа</a></li>
+						</ul>
+					 </li>
+
+					</ul>
+					<div class="mobile-menu__contacts">
+						<div class="mobile-menu__contacts-phone">
+							<img class="contacts-phone__img" src="/img/icon-phone.svg" alt="">
+							<a href="tel:+380989253060" class="contacts-phone__number">+38(098)-925-30-60</a>
+						</div>
+						<div class="mobile-menu__social-block">
+							<div class="social-block__title">Следите за нами</div>
+							<div class="social-block__links">
+								<a href="#"><img src="/img/ins.svg" alt=""></a>
+								<a href="#"><img src="/img/fb.svg" alt=""></a>
+								<a href="#"><img src="/img/pinterest.svg" alt=""></a>
+								<a href="#"><img src="/img/tiktok.svg" alt=""></a>
+							</div>
+						</div>
+					</div>
+				  </div>
+				</div>
+			</div>
+			<div class="header-logo">
+				<img src="/img/logo.png" alt="">
+			</div>
+			<form class="head-btn-search">
+				<input type="search">
+				<img class="btn-search" src="/img/icon-search.svg" alt="">
+			</form>
+			<div class="account-block flex">
+				<div class="account-clients">
+					<a href="#">
+						<img src="/img/account-icon.svg" alt="">
+					</a>
+				</div>
+				<div class="basket-block">
+					<a href="#">
+						<img src="/img/basket-icon.svg" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
       <!--  -->
 
       <!-- Start of page code insertion here -->
@@ -174,16 +277,58 @@
 
       <!-- End of page code insertion here -->
 
-      <!-- @@include('templateHtml/scrollToTopButton.html') -->
+      
     </div>
     <!--  -->
-    @@include('templateHtml/modal.html')
+    <div id="pageOverlay" class="pageOverlay"></div>
+<!--  -->
+<div id="popupOrder" class="popupOrder popup">
+	<div class="popupWrapper">
+		<div class="popupContentWrapper">
+			
+			<!-- <div class="modalHeader flex wrap relative">
+				<div class="icon-block">
+					<i class="icomoon icon-shopping_returns"></i>
+				</div>
+				<div class="modal-title title mcol-xs-12 mcol-sm-7">Returns & Exchanges Policy</div>			
+				<button class="popupCloseButton" type="button"><i class="icomoon icon-delete"></i></button>			
+			</div>
+			
+			<div class="popUpContainer">
+				<div class="description">
+					
+					<p class="description-title">StemarShoes.com Privacy Policy</p>
+					<p>We want you to be fully satisfied with your . You may return or exchange your order for 15 days from when your order arrived.</p>
+					
+					<p>All returns/exchanges must be returned to StemarShoes.com in their original condition, in original packaging, including shoe dust covers and all tags. We do not guarantee wear or tear or any damage unrelated to the manufacturer. Shoes returned with any scratches or scuffs, or excessive creasing in the vamp will not be accepted.</p>
+					
+				</div>
+			</div> -->
+		</div>
+	</div>
+</div>
+
+
     <!--  -->
-    @@include('templateHtml/footer.html')
+    <footer class="mainFooter">
+	Footer - OK!
+</footer>
     <!--  -->
   </div>
   <!--  -->
-  @@include('templateHtml/scripts.html')
+  <!--________SCRIPTS______-->
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+<script type="text/javascript" src="js/dotdotdot.min.js"></script>
+<!-- <script type="text/javascript" src="js/chosen.jquery.min.js"></script> -->
+
+
+<script type="text/javascript" src="js/index.min.js"></script>
+
   <!--  -->
 </body>
 
