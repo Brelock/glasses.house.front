@@ -138,6 +138,17 @@ $(document).ready(function() {
 		}
 	})();
 
+	(function () {  
+		const $btnColorGlesses = $(".offer-glasses_item-check-button input")
+		$btnColorGlesses.on("click", function () {  {
+			const $thisData = $(this).data("check")
+			const $container = $(this).closest(".offer-glasses_item")
+			const $findItem = $container.find(".offer-glasses_item-img")
+			$findItem.html("<img src=" + $thisData + ">");
+			// console.log($findItem);
+		}})
+	})();
+
 	function handlerBottomBannerImg() {  
 		
 		const $bannerT = $(".banner-b-t")
