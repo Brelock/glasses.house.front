@@ -16,6 +16,9 @@
 
 <link rel="icon" type="image/png" href="favicon.ico">
 
+<!-- slick slider -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
 <!-- Font Awesome -->
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
@@ -91,7 +94,7 @@
 							<img class="contacts-phone__img" src="/img/icon-phone.svg" alt="">
 							<a href="tel:+380989253060" class="contacts-phone__number">+38(098)-925-30-60</a>
 						</div>
-						<div class="mobile-menu__social-block">
+						<div class="mobile-menu__social-block social-block">
 							<div class="social-block__title">Следите за нами</div>
 							<div class="social-block__links">
 								<a href="#"><img src="/img/ins.svg" alt=""></a>
@@ -267,9 +270,56 @@
                 </div>   
                 <div class="offer-card-wrap__item-btn wrap-buton">
                   <a class="button" href="#"> Подробнее</a>
+
                 </div>
                 
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-banner">
+          <div class="mcontainer">
+            <div class="bottom-banner-wrap slide">
+
+              <div class="bottom-banner-item">
+                <div class="bottom-banner-item__img banner-b-t">
+                  <img class="" data-defoult-img="/img/banner-b-t.png"  data-mobile="/img/mobile-banner-bottom.png" src="/img/banner-b-t.png" alt="">
+                </div>
+                <div class="bottom-banner-item__contant b-t">
+                  <div class="bottom-banner-item__title">Доставка около 2 дней</div>
+                  <div class="bottom-banner-item__subtitle">Получи очки быстрее, чем когда либо</div>
+                  <div class="bottom-banner-btn wrap-buton">
+                    <a class="button" href="#"> В магазин</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bottom-banner-item">
+                <div class="bottom-banner-item__img banner-b-bd">
+                  <img class="" data-defoult-img="/img/banner-b-bd.png"  data-mobile="/img/mobile-banner-bottom.png" src="/img/banner-b-bd.png" alt="">
+                </div>
+                <div class="bottom-banner-item__contant b-bd">
+                  <div class="bottom-banner-item__title">Доставка около 2 дней</div>
+                  <div class="bottom-banner-item__subtitle">Получи очки быстрее, чем когда либо</div>
+                  <div class="bottom-banner-btn wrap-buton">
+                    <a class="button" href="#"> В магазин</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bottom-banner-item">
+                <div class="bottom-banner-item__img banner-b-bt">
+                  <img class="banner-b-bt" data-defoult-img="/img/banner-b-bt.png"  data-mobile="/img/mobile-banner-bottom.png" src="/img/banner-b-bt.png" alt="">
+                </div>
+                <div class="bottom-banner-item__contant b-bt">
+                  <div class="bottom-banner-item__title">Доставка около 2 дней</div>
+                  <div class="bottom-banner-item__subtitle">Получи очки быстрее, чем когда либо</div>
+                  <div class="bottom-banner-btn wrap-buton">
+                    <a class="button" href="#"> Start</a>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -310,8 +360,52 @@
 
 
     <!--  -->
-    <footer class="mainFooter">
-	Footer - OK!
+    <footer class="main-footer">
+	<div class="mcontainer">
+		<div class="footer-wrap flex spaceBetween">
+
+			<div class="social-block ">
+				<div class="footer-title-list">Подписки</div>
+				<div class="social-block__links footer-list">
+					<a href="#"><img src="/img/ins-white.svg" alt=""></a>
+					<a href="#"><img src="/img/fb-white.svg" alt=""></a>
+					<a href="#"><img src="/img/pinterest-white.svg" alt=""></a>
+					<a href="#"><img src="/img/tiktok-white.svg" alt=""></a>
+				</div>
+			</div>
+
+			<div class="footer-stock ">
+				<div class="footer-title-list">Магазин</div>
+				<ul class="footer-list">
+					<a href="#"><li>Подарочные карты</li></a>
+					<a href="#"><li>Распродажа</li></a>
+					<a href="#"><li>Сонцезащитные очки</li></a>
+					<a href="#"><li>Очки для компьютера</li></a>
+				</ul>
+			</div>
+
+			<div class="footer-help ">
+				<div class="footer-title-list">Помощь</div>
+				<ul class="footer-list">
+					<a href="#"><li>Ответы на вопросы</li></a>
+					<a href="#"><li>Как сделать онлайн заказ</li></a>
+					<a href="#"><li>Как выбрать очки по форме лица</li></a>
+				</ul>
+			</div>
+			
+			<div class="about-us-footer ">
+				<div class="footer-title-list">О нас</div>
+				<ul class="footer-list">
+					<a href="#"><li>Контакты</li></a>
+					<a href="#"><li>Сотрудничество</li></a>
+					<a href="#"><li>Доставка и возврат</li></a>
+					<a href="#"><li>Реферальная программа</li></a>
+					<a href="#"><li>Программма лояльности</li></a>
+				</ul>
+			</div>
+
+		</div>
+	</div>
 </footer>
     <!--  -->
   </div>
@@ -322,6 +416,9 @@
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+<!-- slick slider -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script type="text/javascript" src="js/dotdotdot.min.js"></script>
 <!-- <script type="text/javascript" src="js/chosen.jquery.min.js"></script> -->

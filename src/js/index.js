@@ -122,8 +122,53 @@ $(document).ready(function() {
 	  })(window,document,jQuery);
 
 
-	
+	(function () {  
+		if (!$(".slide").length) return;
+		if (document.documentElement.clientWidth < 768) {
+			$('.slide').slick({
+			  dots: true,
+			  infinite: true,
+			  speed: 300,
+			  slidesToShow: 1,
+			  adaptiveHeight: true,
+			  autoplay: true,
+			  autoplaySpeed: 3000,
+			  arrows: false
+			});
+		}
+	})();
 
+	function handlerBottomBannerImg() {  
+		
+		const $bannerT = $(".banner-b-t")
+		const $bannerBd = $(".banner-b-bd")
+		const $bannerBt = $(".banner-b-bt")
+
+		const $setImgT = $(".banner-b-t img")
+		const $setImgBd = $(".banner-b-bd img")
+		const $setImgBt = $(".banner-b-bt img")
+
+		const $desctopImgT = $setImgT.attr("data-defoult-img")
+		const $desctopImgBd = $setImgBd.attr("data-defoult-img")
+		const $desctopImgBt = $setImgBt.attr("data-defoult-img")
+
+		const $mobImgSlideT = $setImgT.attr("data-mobile")
+		const $mobImgSlideBd = $setImgBd.attr("data-mobile")
+		const $mobImgSlideBt = $setImgBt.attr("data-mobile")
+	
+		if (document.documentElement.clientWidth < 767) {
+			$bannerT.html("<img src=" + $mobImgSlideT + ">");
+			$bannerBd.html("<img src=" + $mobImgSlideBd + ">");
+			$bannerBt.html("<img src=" + $mobImgSlideBt + ">");
+		}
+		if (document.documentElement.clientWidth > 768) {
+			$bannerT.html("<img src=" + $desctopImgT + ">");
+			$bannerBd.html("<img src=" + $desctopImgBd + ">");
+			$bannerBt.html("<img src=" + $desctopImgBt + ">");
+		}
+
+	};
+	handlerBottomBannerImg()
 
 
 
